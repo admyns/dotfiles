@@ -4,6 +4,7 @@ Personal development environment configuration.
 
 ## Included
 - Zsh
+- oh-my-posh
 - Vim
 - Brew
 - VS Code
