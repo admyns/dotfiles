@@ -42,6 +42,3 @@ esac
 
 alias python='/opt/homebrew/opt/python@3.13/bin/python3.13'
 export PATH="/Users/younes/.local/bin:$PATH"
-
-# Added by Antigravity
-export PATH="/Users/younes/.antigravity/antigravity/bin:$PATH"
