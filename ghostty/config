@@ -1,0 +1,14 @@
+theme = dark:tokyonight,light:tokyonight-day
+font-size = 18
+font-family="JetBrains Mono"
+background-opacity = 0.95
+background-blur-radius= 10
+macos-titlebar-style = hidden
+confirm-close-surface = false
+
+keybind = super+shift+v=new_split:right
+keybind = super+shift+h=new_split:down
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+l=goto_split:right
+keybind = ctrl+j=goto_split:bottom
+keybind = ctrl+k=goto_split:top

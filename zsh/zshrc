@@ -1,0 +1,47 @@
+# Initialize completion system
+autoload -Uz compinit && compinit
+
+# Case insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+
+# Partial completion suggestions
+zstyle ':completion:*' list-suffixes
+zstyle ':completion:*' expand prefix suffix
+
+# Better UI for completion
+zstyle ':completion:*' menu select
+
+# Suggest fixes for mistyped commands
+setopt correct            
+
+# Zsh plugins
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Oh-my-posh
+eval "$(oh-my-posh init zsh --config ~/.oh-my-posh/theme.omp.json)"
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/younes/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+# Nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Pnpm
+export PNPM_HOME="/Users/younes/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# Pnpm end
+
+alias python='/opt/homebrew/opt/python@3.13/bin/python3.13'
+export PATH="/Users/younes/.local/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/younes/.antigravity/antigravity/bin:$PATH"

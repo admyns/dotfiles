@@ -1,0 +1,181 @@
+{
+  "editor.fontFamily": "JetBrains Mono, Fira Code",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 12.5,
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "none",
+  "editor.renderLineHighlight": "none",
+  "editor.showFoldingControls": "never",
+  "editor.minimap.enabled": false,
+  "editor.hover.enabled": "on",
+  "editor.lightbulb.enabled": "off",
+  "editor.renderControlCharacters": false,
+  "editor.mouseWheelZoom": true,
+  "editor.scrollbar.verticalScrollbarSize": 2,
+  "editor.scrollbar.horizontalScrollbarSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
+  "eslint.run": "onSave",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "html.autoClosingTags": true,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+      "source.fixAll.ruff": "always"
+    }
+  },
+  "python.analysis.typeCheckingMode": "standard",
+  "python.analysis.generateWithTypeAnnotation": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.packageIndexDepths": [
+    {
+      "name": "",
+      "depth": 5
+    }
+  ],
+  "python.languageServer": "Pylance",
+  "python.analysis.typeEvaluation.deprecateTypingAliases": true,
+  "python.analysis.typeEvaluation.strictDictionaryInference": true,
+  "python.analysis.typeEvaluation.strictListInference": true,
+  "python.analysis.typeEvaluation.strictSetInference": true,
+
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontWeight": 450,
+  "terminal.integrated.fontWeightBold": 800,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.compactFolders": false,
+  "files.autoSave": "onFocusChange",
+  "files.exclude": {
+    "**/__pycache__": true
+  },
+  "extensions.ignoreRecommendations": true,
+  "git.decorations.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "scm.diffDecorations": "none",
+  "chat.commandCenter.enabled": false,
+  "chat.extensionUnification.enabled": true,
+  "breadcrumbs.enabled": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.layoutControl.type": "menu",
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.statusBar.visible": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.editor.showTabs": "none",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.activityBar.location": "hidden",
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.navigationControl.enabled": false,
+  "workbench.colorCustomizations": {
+    "[Default Dark Modern]": {
+      "titleBar.activeBackground": "#1e1e1e",
+      "titleBar.inactiveBackground": "#1e1e1e",
+      "titleBar.border": "#1e1e1e"
+    },
+    "[Tokyo Night Storm]": {
+      "titleBar.activeBackground": "#24283b",
+      "titleBar.inactiveBackground": "#24283b",
+      "titleBar.border": "#24283b",
+      "sideBar.background": "#24283b",
+      "terminal.background": "#24283b",
+      "panel.background": "#24283b"
+    },
+    "[Tokyo Night]": {
+      "titleBar.activeBackground": "#1a1b26",
+      "titleBar.inactiveBackground": "#1a1b26",
+      "titleBar.border": "#1a1b26",
+      "sideBar.background": "#1a1b26",
+      "terminal.background": "#1a1b26",
+      "panel.background": "#1a1b26"
+    }
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "keyword",
+          "variable.language",
+          "meta.var.expr",
+          "storage.modifier",
+          "storage.type",
+          "entity.other.attribute-name",
+          "entity.name.type",
+          "entity.name.class",
+          "markup.italic",
+          "markup.quote",
+          "source.js",
+          "source.jsx",
+          "source.ts",
+          "source.tsx",
+          "storage.type.ts",
+          "entity.name.function.js",
+          "storage.modifier.tsx",
+          "storage.type.tsx",
+          "meta.type.cast.ts",
+          "entity.name.type.ts",
+          "keyword.control.flow.tsx",
+          "meta.block.tsx",
+          "meta.function.expression.tsx",
+          "meta.export.default.tsx",
+          "source.tsx",
+
+          "comment",
+          "meta.var.expr storage.type",
+          "keyword.control.flow",
+          "keyword.control.return",
+          "meta.directive.vue punctuation.separator.key-value.html",
+          "meta.directive.vue entity.other.attribute-name.html",
+          "tag.decorator.js entity.name.tag.js",
+          "tag.decorator.js punctuation.definition.tag.js",
+          "storage.modifier"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "window.zoomLevel": 0,
+  "window.titleBarStyle": "custom",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["K"],
+      "commands": ["lineBreakInsert"],
+      "silent": true
+    }
+  ],
+  "vim.useSystemClipboard": true
+}
