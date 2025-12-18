@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 set -e
 
-DOTFILES="$HOME/Projects/Dotfiles"
-BACKUP_DIR="$HOME/Projects/Dotfiles_backup"
+DOTFILES="$HOME/Dotfiles"
+BACKUP_DIR="$HOME/Dotfiles-backup"
 
 echo "🔗 Installing dotfiles..."
 mkdir -p "$BACKUP_DIR"
 
 # Detect OS
 OS="$(uname -s)"
-echo "Detected OS: $OS"
+echo "💻 Detected OS: $OS"
 
 if [[ "$OS" == "Darwin" ]]; then
     VSCODE_DIR="$HOME/Library/Application Support/Code/User"
@@ -18,37 +18,67 @@ elif [[ "$OS" == "Linux" ]]; then
     VSCODE_DIR="$HOME/.config/Code/User"
     CURSOR_DIR="$HOME/.config/Cursor/User"
 else
-    echo "Unsupported OS: $OS"
+    echo "❌ Unsupported OS: $OS"
     exit 1
 fi
 
 mkdir -p "$VSCODE_DIR" "$CURSOR_DIR"
 
-# Function to backup and symlink
+# -----------------
+# Helper function: backup + symlink
+# -----------------
 link() {
-    TARGET=$1
-    LINK_NAME=$2
-
+    local TARGET="$1"
+    local LINK_NAME="$2"
+    
+    # Create a relative backup path structure
+    local RELATIVE_PATH="${LINK_NAME#"$HOME/"}"
+    
+    # Remove leading dot from path to make it visible in Finder
+    local VISIBLE_PATH="${RELATIVE_PATH#.}"
+    VISIBLE_PATH="${VISIBLE_PATH#/}"  # Remove leading slash if any
+    
+    local BACKUP_PATH="$BACKUP_DIR/$(dirname "$VISIBLE_PATH")"
+    local BACKUP_FILE="$BACKUP_PATH/$(basename "$LINK_NAME").backup"
+    
     if [ -e "$LINK_NAME" ] || [ -L "$LINK_NAME" ]; then
-        echo "📦 Backing up existing $(basename $LINK_NAME)"
-        mv "$LINK_NAME" "$BACKUP_DIR/$(basename $LINK_NAME).backup"
+        mkdir -p "$BACKUP_PATH"
+        mv "$LINK_NAME" "$BACKUP_FILE"
+        echo "📦 Backed up to: $BACKUP_FILE"
+    else
+        echo "⏭️ No existing file to backup: $(basename "$LINK_NAME")"
     fi
-
+    
     ln -sf "$TARGET" "$LINK_NAME"
-    echo "Linked $(basename $LINK_NAME)"
+    echo "✅ Linked $(basename "$LINK_NAME")"
 }
 
 # -----------------
-# Dotfiles Symlinks
+# Symlink Dotfiles
 # -----------------
+link "$DOTFILES/zsh/zshrc" "$HOME/.zshrc"
+
 link "$DOTFILES/vim/vimrc" "$HOME/.vimrc"
+
+mkdir -p "$HOME/.oh-my-posh"
+link "$DOTFILES/oh-my-posh/theme.omp.json" "$HOME/.oh-my-posh/theme.omp.json"
+
 mkdir -p "$HOME/.config/ghostty"
 link "$DOTFILES/ghostty/config" "$HOME/.config/ghostty/config"
+
 link "$DOTFILES/vscode/settings.json" "$VSCODE_DIR/settings.json"
 link "$DOTFILES/vscode/keybindings.json" "$VSCODE_DIR/keybindings.json"
+
 link "$DOTFILES/cursor/settings.json" "$CURSOR_DIR/settings.json"
-link "$DOTFILES/zsh/zshrc" "$HOME/.zshrc"
-link "$DOTFILES/git/gitconfig" "$HOME/.gitconfig"
+link "$DOTFILES/cursor/keybindings.json" "$CURSOR_DIR/keybindings.json"
+
+# -----------------
+# Zsh as default shell
+# -----------------
+if [ "$SHELL" != "$(which zsh)" ]; then
+    echo "🔧 Changing default shell to Zsh..."
+    chsh -s "$(which zsh)" || echo "⚠️ Could not change default shell, please run manually."
+fi
 
 # -----------------
 # Homebrew
@@ -66,24 +96,20 @@ echo "Installing Brew packages..."
 brew bundle --file="$DOTFILES/brew/Brewfile"
 
 # -----------------
-# Zsh as default shell
-# -----------------
-if [ "$SHELL" != "/bin/zsh" ] && [ "$SHELL" != "$(which zsh)" ]; then
-    echo "🔧 Changing default shell to Zsh..."
-    chsh -s "$(which zsh)" || echo "⚠️ Could not change default shell, please run manually."
-fi
-
-# -----------------
-# Oh My Posh
+# Oh My Posh Installation
 # -----------------
 if ! command -v oh-my-posh >/dev/null 2>&1; then
     echo "✨ Installing Oh My Posh..."
     brew install jandedobbeleer/oh-my-posh/oh-my-posh
 fi
 
-# Oh My Posh theme symlink
-mkdir -p "$HOME/.poshthemes"
-link "$DOTFILES/oh-my-posh/theme.omp.json" "$HOME/.oh-my-posh/theme.omp.json"
+# -----------------
+# Load theme in zshrc
+# -----------------
+if ! grep -q "oh-my-posh init zsh" "$HOME/.zshrc"; then
+    echo 'eval "$(oh-my-posh init zsh --config $HOME/.oh-my-posh/theme.omp.json)"' >> "$HOME/.zshrc"
+    echo "✨ Added Oh My Posh theme loading to zshrc"
+fi
 
 echo "🎉 All dotfiles installed successfully!"
-echo "➡️ Restart your terminal to see Zsh + Oh My Posh in action."
+echo "➡️ Restart your terminal to see Zsh + Oh My Posh with your theme."
