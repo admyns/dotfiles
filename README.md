@@ -4,12 +4,13 @@ Personal development environment configuration.
 
 ## Included
 - Zsh
-- oh-my-posh
 - Vim
+- Ghostty
+- Oh-my-posh
 - Brew
 - VS Code
 - Cursor
-- Ghostty
+
 
 ## Install
 ```bash
