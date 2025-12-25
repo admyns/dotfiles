@@ -1,5 +1,6 @@
 bradlc.vscode-tailwindcss
 charliermarsh.ruff
+christian-kohler.path-intellisense
 dbaeumer.vscode-eslint
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
