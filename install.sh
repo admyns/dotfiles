@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-DOTFILES="$HOME/Dotfiles"
+# Resolve the dotfiles dir from this script's own location, so the repo can be
+# cloned anywhere (not just ~/Dotfiles).
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BACKUP_DIR="$HOME/Dotfiles-backup"
 
 echo "🔗 Installing dotfiles..."
@@ -86,10 +88,29 @@ fi
 if ! command -v brew >/dev/null 2>&1; then
     echo "Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    if [[ "$OS" == "Linux" ]]; then
+fi
+
+# Ensure brew is on PATH for the rest of this script (the installer does not
+# modify the current shell's environment).
+if ! command -v brew >/dev/null 2>&1; then
+    if [[ "$OS" == "Darwin" ]]; then
+        # Apple Silicon installs to /opt/homebrew, Intel to /usr/local
+        for BREW_BIN in /opt/homebrew/bin/brew /usr/local/bin/brew; do
+            if [ -x "$BREW_BIN" ]; then
+                echo "eval \"\$($BREW_BIN shellenv)\"" >> "$HOME/.zprofile"
+                eval "$("$BREW_BIN" shellenv)"
+                break
+            fi
+        done
+    elif [[ "$OS" == "Linux" ]]; then
         echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.profile
         eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
     fi
+fi
+
+if ! command -v brew >/dev/null 2>&1; then
+    echo "❌ Homebrew installation failed or brew is not on PATH. Please install manually and re-run."
+    exit 1
 fi
 
 echo "Installing Brew packages..."

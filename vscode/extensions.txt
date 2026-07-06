@@ -1,14 +1,15 @@
 bradlc.vscode-tailwindcss
+chadalen.vscode-jetbrains-icon-theme
 charliermarsh.ruff
 christian-kohler.path-intellisense
 dbaeumer.vscode-eslint
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
+eenaree.webstorm-new-dark
 esbenp.prettier-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
-github.copilot
-github.copilot-chat
+hashicorp.terraform
 hbenl.vscode-test-explorer
 humao.rest-client
 mechatroner.rainbow-csv
@@ -21,4 +22,5 @@ naumovs.color-highlight
 pamaron.pytest-runner
 tamasfe.even-better-toml
 usernamehw.errorlens
+vitest.explorer
 vscodevim.vim

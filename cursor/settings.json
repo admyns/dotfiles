@@ -18,20 +18,20 @@
   "editor.codeActionsOnSave": {},
   "eslint.run": "onSave",
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "html.autoClosingTags": true,
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -39,8 +39,8 @@
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {
       "source.organizeImports": "always",
-      "source.fixAll": "always",
-    },
+      "source.fixAll": "always"
+    }
   },
   "python.languageServer": "None",
   "python.createEnvironment.trigger": "off",
@@ -56,7 +56,7 @@
   "explorer.compactFolders": false,
   "files.autoSave": "onFocusChange",
   "files.exclude": {
-    "**/__pycache__": true,
+    "**/__pycache__": true
   },
   "extensions.ignoreRecommendations": true,
   "git.decorations.enabled": false,
@@ -64,7 +64,6 @@
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
   "scm.diffDecorations": "none",
-  "breadcrumbs.enabled": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "workbench.tree.renderIndentGuides": "none",
   "workbench.layoutControl.type": "menu",
@@ -78,29 +77,7 @@
   "workbench.layoutControl.enabled": false,
   "workbench.navigationControl.enabled": false,
   "workbench.colorTheme": "WebStorm Darker",
-  "workbench.colorCustomizations": {
-    "[Default Dark Modern]": {
-      "titleBar.activeBackground": "#1e1e1e",
-      "titleBar.inactiveBackground": "#1e1e1e",
-      "titleBar.border": "#1e1e1e",
-    },
-    "[Tokyo Night Storm]": {
-      "titleBar.activeBackground": "#24283b",
-      "titleBar.inactiveBackground": "#24283b",
-      "titleBar.border": "#24283b",
-      "sideBar.background": "#24283b",
-      "terminal.background": "#24283b",
-      "panel.background": "#24283b",
-    },
-    "[Tokyo Night]": {
-      "titleBar.activeBackground": "#1a1b26",
-      "titleBar.inactiveBackground": "#1a1b26",
-      "titleBar.border": "#1a1b26",
-      "sideBar.background": "#1a1b26",
-      "terminal.background": "#1a1b26",
-      "panel.background": "#1a1b26",
-    },
-  },
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -139,13 +116,13 @@
           "meta.directive.vue entity.other.attribute-name.html",
           "tag.decorator.js entity.name.tag.js",
           "tag.decorator.js punctuation.definition.tag.js",
-          "storage.modifier",
+          "storage.modifier"
         ],
         "settings": {
-          "fontStyle": "",
-        },
-      },
-    ],
+          "fontStyle": ""
+        }
+      }
+    ]
   },
   "window.commandCenter": true,
   "window.zoomLevel": 0,
@@ -154,15 +131,15 @@
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "j"],
-      "after": ["<Esc>"],
-    },
+      "after": ["<Esc>"]
+    }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["K"],
       "commands": ["lineBreakInsert"],
-      "silent": true,
-    },
+      "silent": true
+    }
   ],
-  "vim.useSystemClipboard": true,
+  "vim.useSystemClipboard": true
 }
