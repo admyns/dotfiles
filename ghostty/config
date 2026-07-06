@@ -1,9 +1,10 @@
 theme = dark:tokyonight,light:tokyonight-day
-font-size = 18
+font-size = 16
 font-family="JetBrains Mono"
 background-opacity = 0.95
 background-blur-radius= 10
-macos-titlebar-style = hidden
+macos-titlebar-style = tabs
+title = " "
 confirm-close-surface = false
 
 keybind = super+shift+v=new_split:right
