@@ -14,6 +14,6 @@ Personal development environment configuration.
 
 ## Install
 ```bash
-git clone git@github.com:admy7/dotfiles.git ~/dotfiles
+git clone git@github.com:admyns/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ./install.sh
