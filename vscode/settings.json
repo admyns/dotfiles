@@ -1,7 +1,7 @@
 {
   "editor.fontFamily": "JetBrains Mono, Fira Code",
   "editor.fontLigatures": true,
-  "editor.fontSize": 12.5,
+  "editor.fontSize": 12,
   "editor.tabSize": 2,
   "editor.renderWhitespace": "none",
   "editor.renderLineHighlight": "none",
@@ -92,8 +92,8 @@
   "workbench.activityBar.location": "hidden",
   "workbench.editor.editorActionsLocation": "hidden",
   "workbench.navigationControl.enabled": false,
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
   "workbench.colorTheme": "Webstorm New Dark",
-  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-auto",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
