@@ -1,4 +1,4 @@
-theme = dark:tokyonight,light:tokyonight-day
+theme = TokyoNight Moon
 font-size = 16
 font-family="JetBrains Mono"
 background-opacity = 0.95
