@@ -1,7 +1,7 @@
 theme = TokyoNight Moon
 font-size = 16
 font-family="JetBrains Mono"
-background-opacity = 0.95
+background-opacity = 1.0
 background-blur-radius= 10
 macos-titlebar-style = tabs
 title = " "
