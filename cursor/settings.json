@@ -1,7 +1,7 @@
 {
   "editor.fontFamily": "JetBrains Mono, Fira Code",
   "editor.fontLigatures": true,
-  "editor.fontSize": 12.5,
+  "editor.fontSize": 13,
   "editor.tabSize": 2,
   "editor.renderWhitespace": "none",
   "editor.renderLineHighlight": "none",
@@ -14,33 +14,33 @@
   "editor.scrollbar.verticalScrollbarSize": 2,
   "editor.scrollbar.horizontalScrollbarSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
+  "editor.linkedEditing": true,
   "editor.codeActionsOnSave": {},
   "eslint.run": "onSave",
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "html.autoClosingTags": true,
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "javascript.updateImportsOnFileMove.enabled": "always",
+  "js/ts.updateImportsOnFileMove.enabled": "always",
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {
       "source.organizeImports": "always",
-      "source.fixAll": "always"
-    }
+      "source.fixAll": "always",
+    },
   },
   "python.languageServer": "None",
   "python.createEnvironment.trigger": "off",
@@ -56,13 +56,17 @@
   "explorer.compactFolders": false,
   "files.autoSave": "onFocusChange",
   "files.exclude": {
-    "**/__pycache__": true
+    "**/__pycache__": true,
+    ".DS_Store": true,
   },
   "extensions.ignoreRecommendations": true,
   "git.decorations.enabled": false,
   "git.openRepositoryInParentFolders": "never",
+  "git.autoRepositoryDetection": true,
+  "git.repositoryScanMaxDepth": 3,
   "gitlens.codeLens.authors.enabled": false,
-  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.currentLine.enabled": true,
+  "gitlens.codeLens.recentChange.enabled": true,
   "scm.diffDecorations": "none",
   "diffEditor.ignoreTrimWhitespace": false,
   "workbench.tree.renderIndentGuides": "none",
@@ -76,53 +80,60 @@
   "workbench.activityBar.orientation": "vertical",
   "workbench.layoutControl.enabled": false,
   "workbench.navigationControl.enabled": false,
-  "workbench.colorTheme": "WebStorm Darker",
-  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "scope": [
-          "comment",
-          "keyword",
-          "variable.language",
-          "meta.var.expr",
-          "storage.modifier",
-          "storage.type",
-          "entity.other.attribute-name",
-          "entity.name.type",
-          "entity.name.class",
-          "markup.italic",
-          "markup.quote",
-          "source.js",
-          "source.jsx",
-          "source.ts",
-          "source.tsx",
-          "storage.type.ts",
-          "entity.name.function.js",
-          "storage.modifier.tsx",
-          "storage.type.tsx",
-          "meta.type.cast.ts",
-          "entity.name.type.ts",
-          "keyword.control.flow.tsx",
-          "meta.block.tsx",
-          "meta.function.expression.tsx",
-          "meta.export.default.tsx",
-          "source.tsx",
-          "comment",
-          "meta.var.expr storage.type",
-          "keyword.control.flow",
-          "keyword.control.return",
-          "meta.directive.vue punctuation.separator.key-value.html",
-          "meta.directive.vue entity.other.attribute-name.html",
-          "tag.decorator.js entity.name.tag.js",
-          "tag.decorator.js punctuation.definition.tag.js",
-          "storage.modifier"
-        ],
-        "settings": {
-          "fontStyle": ""
-        }
-      }
-    ]
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-auto",
+  "workbench.colorCustomizations": {
+    "[Default Dark Modern]": {
+      "titleBar.activeBackground": "#1e1e1e",
+      "titleBar.inactiveBackground": "#1e1e1e",
+      "titleBar.border": "#1e1e1e",
+    },
+    "editor.tokenColorCustomizations": {
+      "textMateRules": [
+        {
+          "scope": [
+            "comment",
+            "keyword",
+            "variable.language",
+            "meta.var.expr",
+            "storage.modifier",
+            "storage.type",
+            "entity.other.attribute-name",
+            "entity.name.type",
+            "entity.name.class",
+            "markup.italic",
+            "markup.quote",
+            "source.js",
+            "source.jsx",
+            "source.ts",
+            "source.tsx",
+            "storage.type.ts",
+            "entity.name.function.js",
+            "storage.modifier.tsx",
+            "storage.type.tsx",
+            "meta.type.cast.ts",
+            "entity.name.type.ts",
+            "keyword.control.flow.tsx",
+            "meta.block.tsx",
+            "meta.function.expression.tsx",
+            "meta.export.default.tsx",
+            "source.tsx",
+            "comment",
+            "meta.var.expr storage.type",
+            "keyword.control.flow",
+            "keyword.control.return",
+            "meta.directive.vue punctuation.separator.key-value.html",
+            "meta.directive.vue entity.other.attribute-name.html",
+            "tag.decorator.js entity.name.tag.js",
+            "tag.decorator.js punctuation.definition.tag.js",
+            "storage.modifier",
+          ],
+          "settings": {
+            "fontStyle": "",
+          },
+        },
+      ],
+    },
   },
   "window.commandCenter": true,
   "window.zoomLevel": 0,
@@ -131,15 +142,15 @@
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "j"],
-      "after": ["<Esc>"]
-    }
+      "after": ["<Esc>"],
+    },
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["K"],
       "commands": ["lineBreakInsert"],
-      "silent": true
-    }
+      "silent": true,
+    },
   ],
-  "vim.useSystemClipboard": true
+  "vim.useSystemClipboard": true,
 }
