@@ -1,11 +1,15 @@
 theme = TokyoNight Moon
+#theme = GitHub Dark Default
 font-size = 16
 font-family="JetBrains Mono"
-background-opacity = 1.0
+background-opacity = 0.94
 background-blur-radius= 10
 macos-titlebar-style = tabs
 title = " "
 confirm-close-surface = false
+auto-update-channel = tip
+tab-inherit-working-directory = false
+working-directory = home
 
 keybind = super+shift+v=new_split:right
 keybind = super+shift+h=new_split:down

@@ -1,11 +1,9 @@
 bradlc.vscode-tailwindcss
-chadalen.vscode-jetbrains-icon-theme
 charliermarsh.ruff
 christian-kohler.path-intellisense
 dbaeumer.vscode-eslint
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
-eenaree.webstorm-new-dark
 esbenp.prettier-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag

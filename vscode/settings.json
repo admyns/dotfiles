@@ -1,139 +1,153 @@
 {
-  "editor.fontFamily": "JetBrains Mono, Fira Code",
+  // ───────────────────────────── Editor: font & text ─────────────────────────────
+  "editor.fontFamily": "JetBrains Mono, Fira Code, monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 12,
+  "editor.fontSize": 13,
+  "editor.mouseWheelZoom": false,
   "editor.tabSize": 2,
-  "editor.renderWhitespace": "none",
-  "editor.renderLineHighlight": "none",
-  "editor.showFoldingControls": "never",
+
+  // ───────────────────────────── Editor: visual noise ────────────────────────────
   "editor.minimap.enabled": false,
+  "editor.renderControlCharacters": false,
+  "editor.renderLineHighlight": "none",
+  "editor.renderWhitespace": "none",
+  "editor.showFoldingControls": "never",
+  "editor.scrollbar.horizontalScrollbarSize": 2,
+  "editor.scrollbar.verticalScrollbarSize": 2,
+
+  // ───────────────────────────── Editor: behavior ────────────────────────────────
   "editor.hover.enabled": "on",
   "editor.lightbulb.enabled": "off",
-  "editor.renderControlCharacters": false,
-  "editor.mouseWheelZoom": true,
-  "editor.scrollbar.verticalScrollbarSize": 2,
-  "editor.scrollbar.horizontalScrollbarSize": 2,
+  "editor.linkedEditing": true,
+  "html.autoClosingTags": true,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+
+  // ───────────────────────────── Formatting & linting ────────────────────────────
+  // Prettier is the global default, so JS/TS/TSX/HTML/CSS don't need their own blocks.
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "always",
-  },
+  "editor.codeActionsOnSave": {},
   "eslint.run": "onSave",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "html.autoClosingTags": true,
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "js/ts.updateImportsOnFileMove.enabled": "always",
+
+  // ───────────────────────────── Python ──────────────────────────────────────────
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "always",
-      "source.fixAll.ruff": "always",
+      "source.organizeImports": "explicit",
+      // "source.fixAll": "explicit",
     },
   },
-  "python.analysis.typeCheckingMode": "standard",
-  "python.analysis.generateWithTypeAnnotation": true,
-  "python.analysis.autoImportCompletions": true,
-  "python.analysis.autoSearchPaths": true,
-  "python.analysis.completeFunctionParens": true,
-  "python.analysis.packageIndexDepths": [
-    {
-      "name": "",
-      "depth": 5,
-    },
-  ],
-  "python.languageServer": "Pylance",
-  "python.analysis.typeEvaluation.deprecateTypingAliases": true,
-  "python.analysis.typeEvaluation.strictDictionaryInference": true,
-  "python.analysis.typeEvaluation.strictListInference": true,
-  "python.analysis.typeEvaluation.strictSetInference": true,
+  "python.createEnvironment.trigger": "off",
 
-  "terminal.integrated.fontFamily": "MesloLGS NF",
-  "terminal.integrated.fontSize": 13,
-  "terminal.integrated.fontWeight": 450,
-  "terminal.integrated.fontWeightBold": 800,
-  "explorer.confirmDragAndDrop": false,
-  "explorer.confirmDelete": false,
-  "explorer.compactFolders": false,
+  // ───────────────────────────── Files & explorer ────────────────────────────────
   "files.autoSave": "onFocusChange",
   "files.exclude": {
     "**/__pycache__": true,
+    ".DS_Store": true,
   },
-  "extensions.ignoreRecommendations": true,
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": true,
+  "explorer.confirmDragAndDrop": true,
+
+  // ───────────────────────────── Git & source control ────────────────────────────
+  "git.autoRepositoryDetection": true,
   "git.decorations.enabled": false,
   "git.openRepositoryInParentFolders": "never",
-  "gitlens.codeLens.authors.enabled": false,
-  "gitlens.codeLens.recentChange.enabled": false,
+  "git.repositoryScanMaxDepth": 3,
+  "scm.alwaysShowRepositories": false,
   "scm.diffDecorations": "none",
-  "chat.extensionUnification.enabled": true,
-  "chat.disableAIFeatures": true,
-  "breadcrumbs.enabled": false,
-  "workbench.tree.renderIndentGuides": "none",
-  "workbench.layoutControl.type": "menu",
-  "workbench.startupEditor": "none",
-  "workbench.tips.enabled": false,
-  "workbench.statusBar.visible": false,
-  "workbench.layoutControl.enabled": false,
-  "workbench.editor.showTabs": "none",
-  "workbench.browser.showInTitleBar": false,
-  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": true,
+  "gitlens.currentLine.enabled": true,
+
+  // ───────────────────────────── Workbench layout (minimal UI) ───────────────────
   "workbench.activityBar.location": "hidden",
   "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.editor.showTabs": "none",
+  "workbench.layoutControl.enabled": false,
   "workbench.navigationControl.enabled": false,
-  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
-  "workbench.colorTheme": "Webstorm New Dark",
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": false,
+  "workbench.tips.enabled": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.browser.showInTitleBar": false,
+  "chat.titleBar.openInAgentsWindow.enabled": false,
+  "extensions.ignoreRecommendations": true,
+
+  // ───────────────────────────── Window ──────────────────────────────────────────
+  "window.autoDetectColorScheme": false,
+
+  // ───────────────────────────── Theme & colors ──────────────────────────────────
+  "workbench.colorTheme": "Dark Modern",
+
+  "workbench.colorCustomizations": {
+    "[Dark Modern]": {
+      "titleBar.activeBackground": "#1e1e1e",
+      "titleBar.inactiveBackground": "#1e1e1e",
+      "titleBar.border": "#1e1e1e",
+
+      // tab strip container
+      "editorGroupHeader.tabsBackground": "#1e1e1e",
+      "editorGroupHeader.tabsBorder": "#1e1e1e",
+      "editorGroupHeader.border": "#1e1e1e",
+      "editorGroup.border": "#1e1e1e",
+
+      // the tabs themselves
+      "tab.activeBackground": "#1e1e1e",
+      "tab.inactiveBackground": "#1e1e1e",
+      "tab.hoverBackground": "#1e1e1e",
+      "tab.unfocusedActiveBackground": "#1e1e1e",
+      "tab.unfocusedInactiveBackground": "#1e1e1e",
+      "tab.unfocusedHoverBackground": "#1e1e1e",
+
+      "breadcrumb.background": "#1e1e1e",
+      "editor.background": "#1e1e1e",
+      "window.activeBorder": "#1e1e1e",
+      "window.inactiveBorder": "#1e1e1e",
+    },
+  },
+
+  // Strip italics everywhere
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
         "scope": [
+          // general
           "comment",
           "keyword",
-          "variable.language",
-          "meta.var.expr",
-          "storage.modifier",
-          "storage.type",
-          "entity.other.attribute-name",
-          "entity.name.type",
-          "entity.name.class",
+          "keyword.control.flow",
+          "keyword.control.return",
           "markup.italic",
           "markup.quote",
+          "storage.modifier",
+          "storage.type",
+          "variable.language",
+          "entity.name.class",
+          "entity.name.type",
+          "entity.other.attribute-name",
+          "meta.var.expr",
+          "meta.var.expr storage.type",
+          // JS / TS / TSX
           "source.js",
           "source.jsx",
           "source.ts",
           "source.tsx",
-          "storage.type.ts",
           "entity.name.function.js",
-          "storage.modifier.tsx",
-          "storage.type.tsx",
-          "meta.type.cast.ts",
           "entity.name.type.ts",
           "keyword.control.flow.tsx",
           "meta.block.tsx",
-          "meta.function.expression.tsx",
           "meta.export.default.tsx",
-          "source.tsx",
-
-          "comment",
-          "meta.var.expr storage.type",
-          "keyword.control.flow",
-          "keyword.control.return",
-          "meta.directive.vue punctuation.separator.key-value.html",
-          "meta.directive.vue entity.other.attribute-name.html",
+          "meta.function.expression.tsx",
+          "meta.type.cast.ts",
+          "storage.modifier.tsx",
+          "storage.type.ts",
+          "storage.type.tsx",
           "tag.decorator.js entity.name.tag.js",
           "tag.decorator.js punctuation.definition.tag.js",
-          "storage.modifier",
+          // Vue
+          "meta.directive.vue entity.other.attribute-name.html",
+          "meta.directive.vue punctuation.separator.key-value.html",
         ],
         "settings": {
           "fontStyle": "",
@@ -141,20 +155,18 @@
       },
     ],
   },
-  "window.zoomLevel": 0,
-  "window.titleBarStyle": "custom",
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "j"],
-      "after": ["<Esc>"],
-    },
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["K"],
-      "commands": ["lineBreakInsert"],
-      "silent": true,
-    },
-  ],
+
+  // ───────────────────────────── Terminal ────────────────────────────────────────
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontWeight": 450,
+  "terminal.integrated.fontWeightBold": 800,
+
+  // ───────────────────────────── Vim ─────────────────────────────────────────────
   "vim.useSystemClipboard": true,
+  "vim.insertModeKeyBindings": [{ "before": ["j", "j"], "after": ["<Esc>"] }],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["K"], "commands": ["lineBreakInsert"], "silent": true },
+  ],
+  "chat.titleBar.signIn.enabled": false,
 }

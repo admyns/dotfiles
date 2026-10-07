@@ -38,8 +38,8 @@
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "always",
-      "source.fixAll": "always",
+      "source.organizeImports": "explicit",
+      // "source.fixAll": "explicit",
     },
   },
   "python.languageServer": "None",
@@ -74,19 +74,43 @@
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
   "workbench.activityBar.location": "hidden",
-  "workbench.editor.showTabs": "none",
+  // "workbench.editor.showTabs": "none",
   "workbench.editor.editorActionsLocation": "hidden",
   "workbench.statusBar.visible": false,
   "workbench.activityBar.orientation": "vertical",
   "workbench.layoutControl.enabled": false,
   "workbench.navigationControl.enabled": false,
   "workbench.colorTheme": "Default Dark Modern",
-  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-auto",
   "workbench.colorCustomizations": {
     "[Default Dark Modern]": {
       "titleBar.activeBackground": "#1e1e1e",
       "titleBar.inactiveBackground": "#1e1e1e",
       "titleBar.border": "#1e1e1e",
+
+      // // tab strip container
+      "editorGroupHeader.tabsBackground": "#1e1e1e",
+      "editorGroupHeader.tabsBorder": "#1e1e1e",
+      "editorGroupHeader.border": "#1e1e1e",
+      "editorGroup.border": "#1e1e1e",
+
+      // the tabs themselves
+      "tab.activeBackground": "#1e1e1e",
+      "tab.inactiveBackground": "#1e1e1e",
+      "tab.hoverBackground": "#1e1e1e",
+      "tab.unfocusedActiveBackground": "#1e1e1e",
+      "tab.unfocusedInactiveBackground": "#1e1e1e",
+      "tab.unfocusedHoverBackground": "#1e1e1e",
+
+      // kill the separators and the accent line
+      // "tab.border": "#1e1e1e",
+      // "tab.activeBorder": "#1e1e1e",
+      // "tab.activeBorderTop": "#1e1e1e",
+      // "tab.unfocusedActiveBorder": "#1e1e1e",
+      // "tab.unfocusedActiveBorderTop": "#1e1e1e",
+      // "tab.lastPinnedBorder": "#1e1e1e",
+
+      "breadcrumb.background": "#1e1e1e",
+      "editor.background": "#1e1e1e",
     },
     "editor.tokenColorCustomizations": {
       "textMateRules": [
@@ -153,4 +177,6 @@
     },
   ],
   "vim.useSystemClipboard": true,
+  "scm.alwaysShowRepositories": false,
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-auto",
 }

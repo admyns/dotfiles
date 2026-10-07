@@ -1,5 +1,4 @@
 anysphere.cursorpyright
-ardonplay.vscode-jetbrains-icon-theme
 bradlc.vscode-tailwindcss
 charliermarsh.ruff
 christian-kohler.path-intellisense
