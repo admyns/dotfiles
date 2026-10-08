@@ -64,7 +64,7 @@
   // ───────────────────────────── Workbench layout (minimal UI) ───────────────────
   "workbench.activityBar.location": "hidden",
   "workbench.editor.editorActionsLocation": "hidden",
-  "workbench.editor.showTabs": "none",
+  // "workbench.editor.showTabs": "none",
   "workbench.layoutControl.enabled": false,
   "workbench.navigationControl.enabled": false,
   "workbench.startupEditor": "none",
@@ -89,9 +89,21 @@
 
       // tab strip container
       "editorGroupHeader.tabsBackground": "#1e1e1e",
+      "editorGroupHeader.connectedTabsBackground": "#1e1e1e",
       "editorGroupHeader.tabsBorder": "#1e1e1e",
       "editorGroupHeader.border": "#1e1e1e",
       "editorGroup.border": "#1e1e1e",
+
+      // borders around the editor area (sidebar, panel, scrollbar ruler)
+      "sideBar.border": "#00000000",
+      "panel.border": "#00000000",
+      "editorOverviewRuler.border": "#00000000",
+
+      // outlines from the "modern" layout (all default to surface.border)
+      "surface.border": "#00000000",
+      "editor.border": "#00000000",
+      "modernPanel.border": "#00000000",
+      "modernActivityBar.border": "#00000000",
 
       // the tabs themselves
       "tab.activeBackground": "#1e1e1e",
@@ -100,11 +112,26 @@
       "tab.unfocusedActiveBackground": "#1e1e1e",
       "tab.unfocusedInactiveBackground": "#1e1e1e",
       "tab.unfocusedHoverBackground": "#1e1e1e",
-
       "breadcrumb.background": "#1e1e1e",
       "editor.background": "#1e1e1e",
       "window.activeBorder": "#1e1e1e",
       "window.inactiveBorder": "#1e1e1e",
+
+      "tab.border": "#1e1e1e",
+      "tab.activeBorder": "#0078d4",
+      "tab.activeBorderTop": "#1e1e1e",
+      "tab.unfocusedActiveBorder": "#0078d480",
+      "tab.unfocusedActiveBorderTop": "#1e1e1e",
+      "tab.lastPinnedBorder": "#1e1e1e",
+      "tab.selectedBackground": "#1e1e1e",
+      "tab.selectedBorderTop": "#1e1e1e",
+
+      // // header when tabs are hidden / single tab mode
+      // "editorGroupHeader.noTabsBackground": "#1e1e1e",
+
+      // // shadow under the tab strip when the editor is scrolled
+      "scrollbar.shadow": "#00000000",
+      "widget.shadow": "#00000000",
     },
   },
 
